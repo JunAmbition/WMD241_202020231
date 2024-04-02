@@ -4,7 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pasta Carbonara</title>
+    <link
+      href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        font-family: "Spoqa Han Sans Neo", "sans-serif";
+        margin: 0;
+        padding: 0;
+      }
       * {
         color: #24211d;
       }
@@ -13,16 +26,16 @@
       }
       .container {
         background-color: #f1eee8;
-        padding: 24px;
+        padding: 32px;
       }
       .callout {
+        margin-bottom: 48px;
         background-color: #dcccad;
-        text-align: center;
-        margin: 0;
-        padding-inline: 16px;
-        padding-block: 16px 16px;
-        border: 10px solid #dcccad;
-        border-radius: 10px 10px 10px 10px;
+        padding: 16px;
+        border-radius: 8px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
       }
       .Quantity {
         text-align: right;
@@ -32,36 +45,130 @@
       }
       table {
         border-collapse: collapse;
-        width: 75%;
+        width: 632px;
+        height: 277px;
       }
       td {
-        padding: 8px;
-        text-align: left;
+        padding: 4px 12px;
       }
       tr.header {
         border-bottom: 2px solid #b1ada8;
       }
+      h1 {
+        font-weight: 700px;
+        font-size: 69px;
+        line-height: 103.5px;
+      }
+      .t1 {
+        margin-bottom: 8px;
+        font-weight: 700px;
+        font-size: 18px;
+        line-height: 27px;
+      }
+      .t2 {
+        margin-bottom: 8px;
+        font-weight: 500px;
+        font-size: 18px;
+        line-height: 27px;
+      }
+      .t3 {
+        margin-bottom: 24px;
+        font-weight: 400px;
+        font-size: 14px;
+        line-height: 21px;
+      }
+      img {
+        margin-bottom: 8px;
+        max-width: 100%;
+        margin-inline: auto;
+        display: block;
+      }
+      .t4 {
+        margin-bottom: 24px;
+        font-weight: 400px;
+        font-size: 14px;
+        line-height: 21px;
+      }
+      .t5 {
+        margin-bottom: 8px;
+        font-weight: 500px;
+        font-size: 18px;
+        line-height: 27px;
+      }
+      .t6 {
+        margin-bottom: 8px;
+        font-weight: 400px;
+        font-size: 18px;
+        line-height: 27px;
+      }
+      .t7 {
+        margin-bottom: 24px;
+        font-weight: 400px;
+        font-size: 18px;
+        line-height: 27px;
+      }
+      h2 {
+        margin-bottom: 12px;
+        font-weight: 700px;
+        font-size: 35px;
+        line-height: 52.5px;
+      }
+      .t8 {
+        margin-bottom: 12px;
+        font-weight: 400px;
+        font-size: 14px;
+        line-height: 21px;
+      }
+      .t9 {
+        margin-bottom: 48px;
+        font-weight: 400px;
+        font-size: 18px;
+        line-height: 27px;
+      }
+      h2 {
+        margin-bottom: 12px;
+        font-weight: 700px;
+        font-size: 35px;
+        line-height: 52.5px;
+      }
+      h3 {
+        margin-bottom: 8px;
+        font-weight: 500px;
+        font-size: 23px;
+        line-height: 34.5px;
+      }
+      .t10 {
+        margin-bottom: 20px;
+        font-weight: 400px;
+        font-size: 18px;
+        line-height: 27px;
+      }
+      .t11 {
+        margin-bottom: 48px;
+        font-weight: 400px;
+        font-size: 18px;
+        line-height: 27px;
+      }
     </style>
   </head>
-  <body style="max-width: 800px; margin-inline: auto">
+  <body style="max-width: 1024px; margin-inline: auto">
     <div class="container">
       <h1 style="font-size: 56px">파스타 카르보나라</h1>
-      <p style="margin-block: 0.5rem 0.5rem"><stong>CLAIRE SAFFITZ</stong></p>
-      <p style="margin-block: 0.5rem 0.5rem">2023.01.04</p>
-      <p style="margin-block: 0.5rem 1.5rem; color: #585550">레서피</p>
+      <p class="t1"><strong>CLAIRE SAFFITZ</strong></p>
+      <p class="t2">레서피</p>
+      <p style="color: #585550" ; class="t3">2023.01.04</p>
       <img
         src="../../../assets/pasta-carbonara.jpg"
         alt="흰 접시 위에 담긴 카르보나라 파스타 관찰레가 같이 버무려져있다"
-        style="max-width: 100%; margin-inline: auto; display: block"
       />
-      <p style="margin-block: 0.5rem; color: #585550">
+      <p style="color: #585550" ; class="t4">
         사진: Chelsie Craig, 스타일링: Molly Baz
       </p>
-      <div style="margin-block: 1.5rem">
-        <p style="margin-block: 1rem">
+      <div>
+        <p class="t5">
           <strong>총 소요 시간 24분</strong>
         </p>
-        <p style="margin-bottom: 0.5rem">
+        <p class="t6">
           육즙이 풍부한 바삭한 돼지고기, 후추 맛이 가득하고 계란으로 풍성한 벨벳
           같은 치즈 소스를 가진 카르보나라는 밤새 놀고 들어온 새벽 2시도 만들 수
           있을 만큼 정말 쉽습니다. 카르보나라는 로마의 대표적인 요리 중
@@ -74,7 +181,7 @@
           비용을 투자하는 것이 좋습니다. 로마노 치즈나 진짜 파르미지아노
           레지아노, 그리고 좋은 스파게티나 부카티니 혹은 리가토니를 사세요.
         </p>
-        <p style="margin-block: 0.5rem">
+        <p class="t6">
           기술에 대해 한 마디: 어떤 카르보나라 레시피던지 크리미한 소스 특유의
           윤기나는 광택을 얻기 위해서는 정확한 시간과 온도에 재료를 첨가하는
           것이 중요합니다. 면수를 ¼컵씩 계란 믹스에 섞고, 파스타에 추가하기 전에
@@ -82,7 +189,7 @@
           것을 잘 섞을 수 있습니다. 그 이후에는 모든 것을 빠르게 섞고 필요에
           따라 소스를 묽게 만들기 위해 더 많은 면수을 추가하세요.
         </p>
-        <p style="margin-block: 0.5rem">
+        <p class="t7">
           저녁 식사 때는 이 파스타 요리를 샐러드와 함께 제공하는 것이 좋지만,
           밤새 놀고 난 뒤라면 그저 포크를 집어 파스타만 먹어도 됩니다.
         </p>
@@ -92,10 +199,10 @@
         선택한 것입니다. 그러나 아래의 소매 링크를 통해 구매해주신다면 저희가
         수수료를 받기에 도움이 됩니다.
       </p>
-      <div style="margin-block: 3rem">
+      <div>
         <h2>재료</h2>
-        <p style="margin-block: 0.75rem; color: #585550">4인분기준</p>
-        <table>
+        <p style="color: #585550" ; class="t8">4인분기준</p>
+        <table class="t9">
           <tr class="header">
             <td>수량</td>
             <td class="Unit">단위</td>
@@ -145,71 +252,71 @@
           </tr>
         </table>
       </div>
-      <h2 style="margin-block: 0.75rem">준비</h2>
-      <h3 style="margin-block: 0.5rem">단계 1</h3>
-      <p style="margin-block: 0.5rem 1.25rem">
+      <h2>준비</h2>
+      <h3>단계 1</h3>
+      <p class="t10">
         큰 냄비에
         <em>5.5qt.의 물</em>
         을 센 불로 가열하세요. 김이 올라오기 시작하면
         <em>소금 3큰술</em>
         을 넣고 뚜껑을 덮어주세요 (이렇게 하면 물이 빨리 끓습니다).
       </p>
-      <h3 style="margin-block: 0.5rem">단계 2</h3>
-      <p style="margin-block: 0.5rem 1.25rem">
+      <h3>단계 2</h3>
+      <p class="t10">
         물이 끓기 전에 다른 준비를 해주세요.
         <em>관찰레 4oz.</em>
         를 약 1x¼" 정도 크기로 잘라주세요.
         <em>치즈 2oz.</em>
         를 곱게 갈아서 ¼ 분량은 나중을 위해 따로 떼어두세요.
       </p>
-      <h3 style="margin-block: 0.5rem">단계 3</h3>
-      <p style="margin-block: 0.5rem 1.25rem">
+      <h3>단계 3</h3>
+      <p class="t10">
         중간 크기의 그릇에
         <em>계란 6개 중 4개는 노른자만, 나머지 2개는 흰자도 같이</em>
         휘핑해줍니다. 노른자들과 흰자가 하나가 될 때까지 휘핑한 후 (나중을 위해
         떼어둔 분량을 제외한) 갈아놓은 치즈를 넣어주세요. 후추를 적당히 갈아
         넣고 한 켠에 보관해주세요.
       </p>
-      <h3 style="margin-block: 0.5rem">단계 4</h3>
-      <p style="margin-block: 0.5rem 1.25rem">
+      <h3>단계 4</h3>
+      <p class="t10">
         냄비 옆에서 주물팬 등 두꺼운 팬에
         <em>기름 2큰술</em>
         을 중간 불로 가열해주세요. 관찰레를 넣고 가장자리가 바삭해질 때까지 가끔
         뒤적이며 약 7-10분간 조리해주세요.
       </p>
-      <h3 style="margin-block: 0.5rem">단계 5</h3>
-      <p style="margin-block: 0.5rem 1.25rem">
+      <h3>단계 5</h3>
+      <p class="t10">
         관찰레를 조리하던 팬의 불을 끄세요. 관찰레를 건져서 작은 그릇에
         옮겨주세요. 관찰레에서 나온 기름은 내열 계량컵에 붓고, 팬에 다시 약
         3큰술을 넣어주세요. 남은 기름은 버려주세요.
       </p>
-      <h3 style="margin-block: 0.5rem">단계 6</h3>
-      <p style="margin-block: 0.5rem 1.25rem">
+      <h3>단계 6</h3>
+      <p class="t10">
         <em>파스타 1lb.</em>
         를 끓는 물에 넣고 가끔 저어주며, 포장에 적힌 시간보다 2분 더 짧게
         조리해주세요. 파스타가 거의 익을 때면, 내열 계량컵으로 면수 1¾컵을 떠서
         가져오세요.
       </p>
-      <h3 style="margin-block: 0.5rem">단계 7</h3>
-      <p style="margin-block: 0.5rem 1.25rem">
+      <h3>단계 7</h3>
+      <p class="t10">
         팬에 떠놓은 면수 중 1컵을 붓고 넣고 중간 불로 끓이세요. 콜랜더로
         파스타를 떠서 팬에 옮겨주세요.
       </p>
-      <h3 style="margin-block: 0.5rem">단계 8</h3>
-      <p style="margin-block: 0.5rem 1.25rem">
+      <h3>단계 8</h3>
+      <p class="t10">
         파스타를 계속 휘저어가며, 물이 대략 절반 정도 줄어들고, 면이 알단테가
         될때까지 약 2분간 조리하세요. 팬을 레인지에서 꺼내세요.
       </p>
-      <h3 style="margin-block: 0.5rem">단계 9</h3>
-      <p style="margin-block: 0.5rem 1.25rem">
+      <h3>단계 9</h3>
+      <p class="t10">
         면수 ¼컵을 계란믹스에 부어 휘젓고, 아주 천천히 팬에 흘려 넣으면서 계속
         저어주세요. 치즈가 녹고 계란이 윤기가는 소스를 형성할 때까지 계속
         저어주세요. 필요하면 소금을 넣어 간을 조절하세요. 소스를 흐르는 크림과
         비슷한 농도로 만들기 위해 남은 면수 ½컵을 젓어 넣어주세요 (아마도 모두
         사용하지는 않을 것입니다).
       </p>
-      <h3 style="margin-block: 0.5rem">단계 10</h3>
-      <p style="margin-block: 0.5rem 3rem">
+      <h3>단계 10</h3>
+      <p class="t11">
         관찰레를 섞어서 파스타를 그릇에 나누어주세요. 후추와 따로 떼어둔
         치즈가루로 꾸며주세요.
       </p>
