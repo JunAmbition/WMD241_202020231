@@ -104,6 +104,9 @@ body {
   color: #929292;
 }
 
+.container-innerhometohome {
+  margin-inline: 8.125rem;
+}
 .container-innerhome {
   margin-block: 8rem 4rem;
 }
