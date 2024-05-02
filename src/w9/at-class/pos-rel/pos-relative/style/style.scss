@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+// 폰트 갖고올려고 쓴 링크
+
+:root {
+  --card-m-y: 1rem;
+  --card-m-x: 1.5rem;
+}
+// 변수 칸이다.
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  // 바디에는 마진0, 왜냐하면 항상 마진이 있으니까
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 150%;
+  color: oklch(0.3 0 0);
+  background-color: oklch(0.9 0 0);
+  overflow-x: hidden;
+}
+
+p {
+  margin-block: 0;
+  // 얘한테도 항상 마진이 있기때문에 마진0을 준다
+}
+
+img {
+  display: block;
+}
+
+.section {
+  > h2 {
+    text-align: center;
+  }
+}
+
+.container {
+  max-width: 60rem;
+  padding: 5rem;
+  margin-inline: auto;
+  background-color: oklch(0.95 0 0);
+}
+
+.card {
+  margin-top: 2rem;
+  background-color: oklch(1 0 0);
+  border: 1px solid oklch(0.5 0 0);
+  border-radius: 0.75rem;
+  &:nth-child(1) {
+    // margin-top: 0;
+  }
+  .section--opt-pos-rel & {
+    // .section--opt-pos-rel 얘 아래 모든 아이들
+    position: relative;
+    &:nth-child(1) {
+      left: 1rem;
+    }
+    &:nth-child(2) {
+      left: 2rem;
+      top: -10;
+    }
+    &:nth-child(3) {
+      left: 3rem;
+      top: -20;
+    }
+    &:nth-child(4) {
+      left: 4rem;
+      top: -30;
+    }
+    &:nth-child(5) {
+      left: 5rem;
+      top: -40;
+    }
+  }
+  .section--opt-margin-negative & {
+    margin-top: -10rem;
+    position: relative;
+    // z값을 먹일려면 이걸 넣어야 한다
+    &:first-child {
+      margin: 0;
+    }
+    // &:nth-child(1) {
+    //   z-index: 1;
+    // }
+    // &:nth-child(2) {
+    //   z-index: 1;
+    // }
+    // &:nth-child(3) {
+    //   z-index: 1;
+    // }
+    // &:nth-child(4) {
+    //   z-index: 1;
+    // }
+    // &:nth-child(5) {
+    //   z-index: 1;
+    // }
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        z-index: #{$i};
+      }
+    }
+  }
+  &:nth-child(1) {
+    margin-top: 0;
+  }
+  // 카드중에서도 첫번째
+  &__top {
+    padding-block: var(--card-m-y);
+    // 앞에 --는 국룰로 무조건 적어야한다 / 변수 개념이다.
+    padding-inline: var(--card-m-x);
+  }
+  &__middle {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    // 비율을 정하는 것
+    object-fit: cover;
+    // 얘를 쓰게되면 이미지를 잘라준다
+  }
+  &__bottom {
+    padding-block: var(--card-m-y);
+    padding-inline: var(--card-m-x);
+  }
+  &__author {
+    font-weight: 600;
+  }
+  &__author-role {
+  }
+  &__title {
+    font-weight: 600;
+  }
+  &__subtitle {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: oklch(0.5 0 0);
+  }
+  &__desc {
+    display: -webkit-box;
+    overflow: hidden;
+    // 얘가 있어야 "아 넘치는구나 안보여줘야겠다." 라는 것
+    -webkit-line-clamp: 3;
+    // 얘가 3이면 3줄, 4면 4줄
+    -webkit-box-orient: vertical;
+  }
+  &--type-new {
+    &::after {
+      position: absolute;
+      top: -0.875rem;
+      right: -0.875rem;
+      content: "N";
+      aspect-ratio: 1 /1;
+      width: 1lh;
+      // lh는 line height의 약자이다.
+      font-size: 0.875rem;
+      color: #fff;
+      display: block;
+      background-color: #ff0000;
+      border-radius: 624.9375rem;
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+  &--pos-rel {
+    position: relative;
+  }
+}
