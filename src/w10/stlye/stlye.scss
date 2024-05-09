@@ -1,0 +1,73 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 150%;
+}
+
+.section {
+  padding-block: 1.5rem;
+}
+
+.section > h2 {
+  max-width: 60rem;
+  margin-inline: auto;
+  margin-block: 0;
+  padding-inline: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+// section 아래에 있는 h2만 적용
+.container {
+  max-width: 60rem;
+  margin-inline: auto;
+  // padding: 1.5rem;
+  padding-inline: 1.5rem;
+  background-color: oklch(0.95 0.01 240);
+}
+
+.grid {
+  display: grid;
+
+  &__item {
+    &--nth {
+      @for $i from 1 through 12 {
+        &-#{$i} {
+          background-color: oklch(0.9 0.05 $i * 30);
+        }
+      }
+    }
+  }
+
+  &--opt-1 {
+    grid-template-columns: 1fr 1fr 1fr;
+    // 1fr:무조건 비율을 지켜가며 나눈다.
+    // grid-template-rows: 1fr 1fr 1fr 1fr;
+    // column:가로사이즈, rows:세로사이즈
+    grid-template-rows: 4fr;
+    //위에서 첫번째 칸만 4fr로 만들어 준다. 아래랑 둘이 같이 사용 가능
+    grid-auto-rows: 1fr;
+    // auto-rows는 새로 생기 rows의 값을 나 같이 만들 수 있다. 비례를 같게 만든다.
+    column-gap: 0.75rem;
+    // 가로 여백
+    row-gap: 1.5rem;
+    // 세로 여백
+  }
+
+  &--opt-2 {
+    // grid-template-columns: repeat(3, 1fr);
+    // grid-template-columns: 200px repeat(2, 1fr);
+    // 오른쪽에서 첫번째 애들은 죽어도 200px인 것
+    // grid-template-columns: repeat(3, minmax(100px, 1fr));
+    // 한쪽에는 최소값, 한쪽엔 최대값 지정하기
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    // 걍 거의 공식임 이건
+    grid-auto-rows: 1fr;
+    column-gap: 0.75rem;
+    row-gap: 1.5rem;
+  }
+}

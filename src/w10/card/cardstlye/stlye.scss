@@ -1,63 +1,58 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
-
-:root {
-  --card-m-y: 1rem;
-  --card-m-x: 1.5rem;
-}
-
 .card {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-size: 1.125rem;
-  font-weight: 400;
-  line-height: 150%;
   margin-top: 2rem;
   background-color: oklch(1 0 0);
   border: 1px solid oklch(0.5 0 0);
   border-radius: 0.75rem;
+  &:nth-child(1) {
+    // margin-top: 0;
+  }
   .section--opt-pos-rel & {
+    // .section--opt-pos-rel 얘 아래 모든 아이들
     position: relative;
     &:nth-child(1) {
       left: 1rem;
     }
     &:nth-child(2) {
       left: 2rem;
-      top: -10rem;
+      top: -10;
     }
     &:nth-child(3) {
       left: 3rem;
-      top: -20rem;
+      top: -20;
     }
     &:nth-child(4) {
       left: 4rem;
-      top: -30rem;
+      top: -30;
     }
     &:nth-child(5) {
       left: 5rem;
-      top: -40rem;
+      top: -40;
     }
   }
   .section--opt-margin-negative & {
     margin-top: -10rem;
     position: relative;
+    // z값을 먹일려면 이걸 넣어야 한다
     &:first-child {
-      margin-top: 0;
+      margin: 0;
     }
     // &:nth-child(1) {
     //   z-index: 1;
     // }
     // &:nth-child(2) {
-    //   z-index: 2;
+    //   z-index: 1;
     // }
     // &:nth-child(3) {
-    //   z-index: 3;
+    //   z-index: 1;
     // }
     // &:nth-child(4) {
-    //   z-index: 4;
+    //   z-index: 1;
     // }
     // &:nth-child(5) {
-    //   z-index: 5;
+    //   z-index: 1;
     // }
-    @for $i from 1 through 100 {
+    @for $i from 1 through 5 {
       &:nth-child(#{$i}) {
         z-index: #{$i};
       }
@@ -66,14 +61,18 @@
   &:nth-child(1) {
     margin-top: 0;
   }
+  // 카드중에서도 첫번째
   &__top {
     padding-block: var(--card-m-y);
+    // 앞에 --는 국룰로 무조건 적어야한다 / 변수 개념이다.
     padding-inline: var(--card-m-x);
   }
   &__middle {
     width: 100%;
     aspect-ratio: 1 / 1;
+    // 비율을 정하는 것
     object-fit: cover;
+    // 얘를 쓰게되면 이미지를 잘라준다
   }
   &__bottom {
     padding-block: var(--card-m-y);
@@ -95,24 +94,27 @@
   &__desc {
     display: -webkit-box;
     overflow: hidden;
+    // 얘가 있어야 "아 넘치는구나 안보여줘야겠다." 라는 것
     -webkit-line-clamp: 3;
+    // 얘가 3이면 3줄, 4면 4줄
     -webkit-box-orient: vertical;
   }
   &--type-new {
     &::after {
       position: absolute;
-      top: -12px;
-      right: -12px;
+      top: -0.875rem;
+      right: -0.875rem;
       content: "N";
-      height: 1lh;
-      aspect-ratio: 1 / 1;
+      aspect-ratio: 1 /1;
+      width: 1lh;
+      // lh는 line height의 약자이다.
       font-size: 0.875rem;
       color: #fff;
       display: block;
-      font-weight: 600;
-      text-align: center;
       background-color: #ff0000;
       border-radius: 624.9375rem;
+      font-weight: 600;
+      text-align: center;
     }
   }
   &--pos-rel {
