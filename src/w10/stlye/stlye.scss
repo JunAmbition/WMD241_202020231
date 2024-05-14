@@ -48,7 +48,7 @@ body {
     // 1fr:무조건 비율을 지켜가며 나눈다.
     // grid-template-rows: 1fr 1fr 1fr 1fr;
     // column:가로사이즈, rows:세로사이즈
-    grid-template-rows: 4fr;
+    grid-template-rows: 3fr;
     //위에서 첫번째 칸만 4fr로 만들어 준다. 아래랑 둘이 같이 사용 가능
     grid-auto-rows: 1fr;
     // auto-rows는 새로 생기 rows의 값을 나 같이 만들 수 있다. 비례를 같게 만든다.

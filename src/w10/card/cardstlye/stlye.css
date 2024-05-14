@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 .card {
-  /* margin-top: 2rem; */
+  margin-top: 2rem;
   background-color: oklch(1 0 0);
   border: 1px solid oklch(0.5 0 0);
   border-radius: 0.75rem;
@@ -60,7 +60,7 @@
   width: 100%;
   aspect-ratio: 1/1;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 .card__bottom {
   padding-block: var(--card-m-y);

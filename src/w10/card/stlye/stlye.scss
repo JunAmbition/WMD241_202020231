@@ -33,11 +33,11 @@ body {
 }
 
 .card-collection {
-  row-gap: 1.5rem;
+  row-gap: 2rem;
   display: grid;
   grid-column: 2 / -1;
-  grid-row: 1 / -1;
-  grid-template-columns: subgrid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 261px 261px 261px;
 }
 
 .title {

@@ -70,7 +70,7 @@ body {
 }
 .grid--opt-1 {
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 4fr;
+  grid-template-rows: 3fr;
   grid-auto-rows: 1fr;
   -moz-column-gap: 0.75rem;
        column-gap: 0.75rem;
